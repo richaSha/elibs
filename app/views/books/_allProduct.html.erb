@@ -1,0 +1,31 @@
+<div class="clear"></div>
+<div id="categoryWrapper">
+  <div id="navColumnOneWrapper" style="width: 250px">
+     <div class="leftBoxContainer" id="categories" style="width: 250px">
+        <h3 class="leftBoxHeading" id="categoriesHeading">Categories</h3>
+        <div id="cssmenu">
+          <ul>
+          <% @titles.each do |title| %>
+            <li><%= link_to title.title, title_path(title) %></li>
+          <% end %>
+        </ul>
+        </div>
+     </div>
+</div>
+  <div id="productWrapper">
+    <h2 class="centerBoxHeading"><%=@bookTitle ? @bookTitle:'Book Lists'%></h2>
+    <div class="products">
+       <% @books.each do |book| %>
+       <div id="book-<%= book.id %>" class="product">
+          <div class="centerBoxContentsFeatured centeredContent back" style="width: 33%; height: 371px;">
+             <a class="proimage" style="min-height:235px;"><%= image_tag book.cover.url(:medium) %></a>
+             <h3>
+                <%= link_to book.name, book_path(book), class: 'static-popup-link'%>
+              </h3>
+          </div>
+       </div>
+       <% end %>
+    </div>
+  </div>
+
+<div class="clear"></div>

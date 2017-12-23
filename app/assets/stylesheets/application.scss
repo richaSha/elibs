@@ -1,0 +1,335 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
+ body {
+  background-color: #62ae87;
+ }
+
+.right{
+  float: right;
+}
+
+.product-image{
+  width: 100%;
+  text-align: center;
+  color: #484747;
+  font-size: 1.5rem;
+}
+
+.product-image img{
+  width: 250px;
+  height: 250px;
+}
+
+.title{
+  background-color: #62ae87;
+  color: #fff;
+  padding: 2rem 10%;
+  margin: 0;
+}
+
+.title img{
+  height :106px;
+  width: 417 px;
+}
+.title div{
+  display: inline-block;
+}
+.title .cartWrapper{
+  float: right;
+  font-size: 3rem;
+  color: #62d3db;
+  margin-top: 3rem;
+}
+
+.cartWrapper a:hover, .cartWrapper a{
+  text-decoration: none;
+  color: #62d3db;
+}
+.cartText{
+ color: #fff;
+ font-size: 1rem
+}
+
+.cartImg, .cartText{
+  display: inline-block;
+}
+.cart-icon{
+  font-size: 1.5rem;
+}
+.cart-text{
+  color: #fff;
+}
+.menu {
+  background-color: #357552;
+  padding: 0 10%;
+}
+.menu a{
+  color: #fff;
+  display: block;
+  height: 20px;
+  font-size: 1.8rem;
+  transition: all 0.5s ease;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+    text-decoration: none;
+    background-color: #387551;
+    color: #18E5ED;
+}
+.home-back {
+    background: #357552;
+    display: table;
+    height: auto;
+    width: 100%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+.mainwidth {
+    margin: 0 auto;
+    text-align: left;
+    width: 1130px;
+    min-width: 960px;
+    vertical-align: top;
+}
+#home-images {
+    width: 100%;
+}
+.home-img:first-child {
+    margin-left: 0px;
+}
+.home-img {
+    float: left;
+    position: relative;
+    width: 32.33%;
+    margin-left: 1.5%;
+    overflow: hidden;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+.home-img .stat {
+  padding: 0 0 1% 0;
+  width: 100%;
+  background: #539975;
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 1rem;
+}
+.home-img .stat h2 {
+    font-size: 300%;
+    margin-left: 10px;
+}
+
+.home-img2:first-child {
+    margin-left: 0px;
+}
+
+.home-img2 {
+    float: left;
+    position: relative;
+    width: 49.3%;
+    margin-left: 15px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 15px;
+}
+.home-img2 a {
+    width: 100%;
+    display: block;
+    float: right;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.home-img2 a.info {
+    background: #357552;
+    height: 100%;
+    position: absolute;
+    width: 34%;
+}
+.stat2{
+    padding-left: 5%;
+}
+.leftBoxContainer {
+    margin: 0 0 15px;
+}
+#cssmenu {
+    background: #357552;
+    padding-left: 10px;
+    padding-right: 10px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+#cssmenu, #cssmenu ul, #cssmenu li, #cssmenu a {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    font-weight: normal;
+    text-decoration: none;
+    line-height: 1;
+    font-size: 17px;
+    position: relative;
+    margin: 0 5%;
+}
+#cssmenu > ul > li {
+    margin: 2px 0 0;
+}
+#cssmenu > ul > li > a {
+    color: #ffffff;
+    cursor: pointer;
+    display: block;
+    line-height: 24.4px;
+    padding: 10px 10px 10px 0;
+    border-bottom: 2px solid #539975;
+    transition: all 0.2s ease;
+}
+#indexDefault {
+    padding-right: 0;
+}
+#featuredProducts {
+    margin: 0 -4px 1.1em;
+}
+.centerBoxWrapper {
+    height: 1%;
+    margin: 0 0 1.1em 0;
+}
+#categoryWrapper {
+  margin: 0 11%;
+}
+h3.leftBoxHeading, h3.rightBoxHeading {
+    padding: 12px 7px;
+    margin-bottom: 15px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    font-weight: normal;
+    text-align: center;
+    text-transform: uppercase;
+    background: #18e5ed;
+    background: -moz-linear-gradient(top, #18e5ed 0%, #00bfc7 99%);
+    background: -webkit-linear-gradient(top, #18e5ed 0%,#00bfc7 99%);
+    background: linear-gradient(to bottom, #18e5ed 0%,#00bfc7 99%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#18e5ed', endColorstr='#00bfc7',GradientType=0 );
+    font-size: 18px;
+    color: #fff !important;
+}
+.clear{
+  clear:both;
+}
+h2.centerBoxHeading {
+    background: #357552 !important;
+    font-size: 19px;
+    font-weight: normal;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    padding: 12px 15px;
+    margin-left: 4px;
+    margin-right: 4px;
+    color: #18E5ED;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+#navColumnOneWrapper, #productWrapper{
+    float : left;
+}
+#productWrapper {
+    width: 75%;
+    float: right;
+    text-align: center;
+}
+.centerBoxContentsFeatured img{
+  width: 235px;
+  height: 235px;
+}
+.product{
+  display: inline-block;
+  background: #387551;
+  font-size: 1rem;
+  border-radius: 1rem;
+  margin: 10px 18px;
+  overflow: hidden;
+  max-height: 290px;
+  max-width: 235px;
+  float: left;
+}
+
+.itemTitle a{
+  width: 100%;
+}
+.product h3{
+  width: 235px;
+}
+.product h3 a {
+  color: #fff;
+  font-size: 20px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 95%;
+  display: block;
+  overflow: hidden;
+}
+.productDetilsWrapper{
+  background: #387551;
+}
+.productDetils{
+  padding: 3% 10%;
+}
+.productDetils img{
+  height: 400px;
+  width: 400px;
+  border-radius: 2rem;
+}
+.image-wrapper, .productInfo{
+  float: left;
+}
+.productInfo{
+  margin-left: 10%;
+  color: #fff;
+  min-width: 50%;
+}
+.productInfo b, .reviewHeader{
+  color: #6be5ed;
+}
+.productInfo p{
+  font-size: 2rem;
+  margin: 3%;
+}
+.reviewDetail{
+  color: #fff;
+  border-bottom: 1px dotted #000;
+  margin: 0 3%;
+  padding: 1rem 0;
+}
+.user-img{
+  height: 4rem !important;
+  width: 4rem !important;
+}
+.centerWrap{
+  padding: 2% 12%;
+  color: #fff;
+}
+.input-field {
+  margin-bottom: 5px;
+}

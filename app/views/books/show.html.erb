@@ -1,0 +1,46 @@
+<div class="productDetilsWrapper">
+  <div class="productDetils">
+    <div class="image-wrapper">
+      <%= image_tag @book.cover.url(), class: "responsive-img" %>
+    </div>
+    <div class="productInfo">
+      <h1><%= @book.name %></h1>
+      <p><b>Author:</b> <%= @book.author %></p>
+      <p><b>Publisher:</b> <%= @book.publisher %></p>
+      <p><b>category:</b> <%= @title.title %></p>
+      <p><b>Total no of pages:</b> <%= @book.page_count %></p>
+      <br>
+      <%= form_for @order_item do |f| %>
+      <%= f.hidden_field :book_id, value: @book.id %>
+        <%= f.hidden_field :quantity, value: 1, class: 'quantity-input' %>
+        <%= f.submit "Add to wish list", class: "btn btn-success", id: "add_to_cart" %>
+    <% end %>
+    </div>
+    <div class="clear"></div>
+    <h3 class="reviewHeader">Reviews: </h3>
+    <%if @book.reviews.length > 1 %>
+      <% @book.reviews.each do |reviews| %>
+        <% if reviews.review %>
+          <div>
+            <%= image_tag 'user-dummy.png', class: "user-img" %>
+            <%= reviews.user.name %>
+          </div>
+          <h5 class="reviewDetail"><%= reviews.review %></h5>
+        <% end %>
+      <% end %>
+    <% else %>
+      <h5 class="reviewDetail">No reviews are available.</h5>
+    <% end %>
+    <br>
+    <% if current_user %>
+      <%= form_for @review do |f| %>
+      <%= f.hidden_field :book_id, value: @book.id %>
+      <%= f.hidden_field :user_id, value: User.find(session[:user_id]) %>
+
+        <%= f.text_area :review, value: "Good Book!" , size: '100x6' %>
+        <br>
+        <%= f.submit "Add review", class: "btn btn-success" %>
+        <% end %>
+    <% end %>
+  </div>
+</div>

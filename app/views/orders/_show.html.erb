@@ -1,0 +1,26 @@
+<table class="bordered">
+  <thead>
+    <tr>
+        <th>Book</th>
+        <% unless order.finalized? %>
+          <th></th>
+        <% end %>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% order.order_items.each do |item| %>
+      <tr id='order-item-<%= item.id %>'>
+        <td><%= item.book.name %></td>
+        <% unless order.finalized? %>
+          <td><%= link_to "Remove", order_item_path(item), remote: true, :data => {:confirm => "Are you sure you want to remove this item?", :method => "delete"} %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<p>
+  Your Issued Date Will Be: <span class="cart-price"><%= Date.today %></span>
+  <br>
+  Your Return Date Will Be: <span class="cart-price"><%= Date.today + 7.day %></span>
+</p>
